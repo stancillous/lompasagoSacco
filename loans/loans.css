@@ -1,0 +1,68 @@
+@import url("../utils/headerFooter.css");
+.page-content {
+  opacity: 0;
+}
+
+.loans-section {
+  margin-top: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+.loans-section .loans-container {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.loans-section .loans-container .loans-parent {
+  margin: 3rem;
+  padding: 2rem;
+}
+.loans-section .loans-container .loans-parent .image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.loans-section .loans-container .loans-parent h2 {
+  padding: 1rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.loans-section .loans-container .loans-parent p {
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 1500px) {
+  .loans-section .loans-container {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1830px) {
+  .loans-section .loans-container {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .loans-section .loans-container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .loans-section .loans-container {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 600px) {
+  .loans-section .loans-container {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+  .loans-section .loans-container .loans-parent {
+    margin: 1rem;
+  }
+}/*# sourceMappingURL=loans.css.map */
