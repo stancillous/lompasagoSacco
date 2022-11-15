@@ -17,21 +17,21 @@
                 <div class="menu-links">
                     <ul>
                         <li class="menu-links-item active-link">
-                            <router-link to="/">Home</router-link>
+                            <router-link class="nav-links" to="/">Home</router-link>
                         </li>
                         <li class="menu-links-item">
-                            <router-link to="/about">About</router-link>
+                            <router-link class="nav-links" to="/about">About</router-link>
                         </li>
                         <li class="menu-links-item">
-                            <router-link to="/loans">Loans</router-link>
+                            <router-link class="nav-links" to="/loans">Loans</router-link>
                         </li>
                         <li class="menu-links-item">
-                            <router-link to="/savings">Savings</router-link>
+                            <router-link class="nav-links" to="/savings">Savings</router-link>
                         </li>
                         <li class="menu-links-item">
-                            <router-link to="/contact">Contact Us</router-link>
+                            <router-link class="nav-links" to="/contact">Contact Us</router-link>
                         </li>
-                        <button class="join-us"> <router-link to="/membership">Join Us</router-link> </button>
+                        <button class="join-us"> <router-link class="nav-links" to="/membership">Join Us</router-link> </button>
     
                     </ul>
                 </div>
@@ -61,20 +61,13 @@
                     //disable scrolling when the button is clicked
                     document.body.classList.toggle('hideOverflow')
 
-
-                    //animating the links item when the button is clicked
-                    if(hamburgerBtn.classList.contains('hamburgerClicked')){
-                        // menuLinksItemTl.play()
-                    }
-                
-                    else{
-                        // menuLinksItemTl.reverse()
-                    }
-                
-
-                
-                
-                
+                    let navRouterLinks = document.querySelectorAll('.nav-links')
+                    navRouterLinks.forEach((link)=>{
+                        
+                        link.addEventListener('click',()=>{
+                            hamburgerBtn.classList.remove('hamburgerClicked')
+                            document.querySelector('.menu-links').classList.remove('active')
+                    })
                 
                 })
             }
