@@ -52,6 +52,7 @@
             showMenuButton(){
                 let hamburgerBtn = document.querySelector('.hamburger-button')
                 //EVENT LISTENER ON THE HAMBURGER BUTTON
+
                 hamburgerBtn.addEventListener('click',()=>{
                     //animating the hamburger button
                     hamburgerBtn.classList.toggle('hamburgerClicked')
@@ -70,10 +71,12 @@
                     })
                 
                 })
-            }
+            })
+        }
         }
     }
 </script>
+
 
 <style lang="scss" scoped>
 $web-color:#293df1;
